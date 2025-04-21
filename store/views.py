@@ -20,11 +20,10 @@ class ProductCreateView(CreateView):
     form_class = ProductForm
     template_name = 'store/product_form.html'
 
-    def form_valid(self, form):
-        response = super().form_valid(form)
-        send = log_new_product.delay(form.instance.name)
-        print(f'Sending Message to MQ: {send}')
-        return response
+    #def form_valid(self, form):
+     #   response = super().form_valid(form)
+      # print(f'Sending Message to MQ: {send}')
+        #return response
 
     def get_success_url(self):
         return self.object.get_absolute_url()
