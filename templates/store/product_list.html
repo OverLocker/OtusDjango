@@ -1,0 +1,16 @@
+<!-- templates/store/product_list.html -->
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h1>Product List</h1>
+<ul>
+    {% for product in products %}
+        <li>
+            <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - {{ product.price }}
+        </li>
+    {% empty %}
+        <li>No products available.</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'product_add' %}">Add a new product</a>
+{% endblock %}
