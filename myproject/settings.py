@@ -62,9 +62,9 @@ CELERY_TASK_SERIALIZER = 'json'
 SECRET_KEY = 'django-insecure-sxnbnub#i*4o=i^dma@1&(ohgn*d)od)5m0xoq#3bq^(w%yt#a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
